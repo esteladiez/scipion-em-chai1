@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scipion-em-chai1"
+dynamic = ["version", "dependencies"]
+
+authors = [
+    {name = "Estela Díez"}
+]
+description = "Plugin to use Chai-1 within the Scipion framework"
+readme = "README.rst"
+requires-python = ">=3.8"
+keywords = ["scipion", "electron-microscopy", "structural-biology", "scipion-3.0"]
+license = {text = "GNU General Public License v3 (GPLv3)"}
+
+[project.urls]
+Homepage = "https://github.com/scipion-em/scipion-em-chai1"
+Repository = "https://github.com/scipion-em/scipion-em-chai1"
+Issues = "https://github.com/scipion-em/scipion-em-chai1/issues"
+
+[tool.setuptools.package-data]
+"chai1"= ["protocols.conf", "icon.png"]
+
+[project.entry-points."pyworkflow.plugin"]
+chai1 = "chai1"
+
+[tool.setuptools.dynamic]
+version = {attr = "chai1.__version__"}
+dependencies = {file = ["requirements.txt"]}
