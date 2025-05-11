@@ -12,7 +12,8 @@ authors = [
 description = "Plugin to use Chai-1 within the Scipion framework"
 readme = "README.rst"
 requires-python = ">=3.8"
-keywords = ["scipion", "electron-microscopy", "structural-biology", "scipion-3.0"]
+keywords = ["scipion", "electron-microscopy", "structural-biology",
+            "scipion-3.0"]
 license = {text = "GNU General Public License v3 (GPLv3)"}
 
 [project.urls]
